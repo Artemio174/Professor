@@ -30,12 +30,12 @@ public class ManutencaoProfessor extends javax.swing.JDialog {
 
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jtfnome = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jtfsobrenome = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
-        jtfendereco = new javax.swing.JLabel();
-        jTextField3 = new javax.swing.JTextField();
+        jtfNome = new javax.swing.JLabel();
+        jtfnome = new javax.swing.JTextField();
+        jtfSobrenome = new javax.swing.JLabel();
+        jtfsobrenome = new javax.swing.JTextField();
+        jtfEndereco = new javax.swing.JLabel();
+        jtfendereco = new javax.swing.JTextField();
         btnAdicionar = new javax.swing.JButton();
         btnAlterar = new javax.swing.JButton();
         btnExcluir = new javax.swing.JButton();
@@ -57,11 +57,11 @@ public class ManutencaoProfessor extends javax.swing.JDialog {
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel1.setText("Professor");
 
-        jtfnome.setText("Nome:");
+        jtfNome.setText("Nome:");
 
-        jtfsobrenome.setText("Sobrenome:");
+        jtfSobrenome.setText("Sobrenome:");
 
-        jtfendereco.setText("Endereço:");
+        jtfEndereco.setText("Endereço:");
 
         btnAdicionar.setText("Adicionar");
         btnAdicionar.addActionListener(new java.awt.event.ActionListener() {
@@ -90,21 +90,21 @@ public class ManutencaoProfessor extends javax.swing.JDialog {
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jtfendereco)
+                                .addComponent(jtfEndereco)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jTextField3))
+                                .addComponent(jtfendereco))
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jtfsobrenome)
+                                .addComponent(jtfSobrenome)
                                 .addGap(18, 18, 18)
-                                .addComponent(jTextField2))
+                                .addComponent(jtfsobrenome))
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jtfnome)
+                                .addComponent(jtfNome)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(jtfnome, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(btnAdicionar)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGap(10, 10, 10)
                         .addComponent(btnAlterar)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(btnExcluir)
@@ -119,16 +119,16 @@ public class ManutencaoProfessor extends javax.swing.JDialog {
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jtfnome)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jtfNome)
+                    .addComponent(jtfnome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jtfsobrenome)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jtfSobrenome)
+                    .addComponent(jtfsobrenome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jtfendereco)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jtfEndereco)
+                    .addComponent(jtfendereco, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(40, 40, 40)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnAdicionar)
@@ -142,7 +142,7 @@ public class ManutencaoProfessor extends javax.swing.JDialog {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnAdicionarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAdicionarActionPerformed
-        // TODO add your handling code here:
+controlador.ControladorProfessor.inserir(this);        // TODO add your handling code here:
     }//GEN-LAST:event_btnAdicionarActionPerformed
 
     /**
@@ -194,11 +194,11 @@ public class ManutencaoProfessor extends javax.swing.JDialog {
     public javax.swing.JButton btnExcluir;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
-    public javax.swing.JTextField jTextField1;
-    public javax.swing.JTextField jTextField2;
-    public javax.swing.JTextField jTextField3;
-    private javax.swing.JLabel jtfendereco;
-    private javax.swing.JLabel jtfnome;
-    private javax.swing.JLabel jtfsobrenome;
+    private javax.swing.JLabel jtfEndereco;
+    private javax.swing.JLabel jtfNome;
+    private javax.swing.JLabel jtfSobrenome;
+    public javax.swing.JTextField jtfendereco;
+    public javax.swing.JTextField jtfnome;
+    public javax.swing.JTextField jtfsobrenome;
     // End of variables declaration//GEN-END:variables
 }
